@@ -25,11 +25,16 @@ class CheckNet:
         return False
 
 
-conn_attempt = CheckNet()
-if conn_attempt.is_connected:
-    webbrowser.open(REMOTE_SERVER)
-else:
-    print('not internet connection')
+def main():
+    conn_attempt = CheckNet()
+    if conn_attempt.is_connected:
+        webbrowser.open(REMOTE_SERVER)
+    else:
+        print('not internet connection')
+
+
+if __name__ == '__main__':
+    main()
 
 
 
